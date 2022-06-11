@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Blur_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KJ7-vh-9D6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPH-QQ-2IA" customClass="RainbowView" customModule="Blur_App" customModuleProvider="target">
+                                <rect key="frame" x="56.5" y="100" width="262.5" height="262.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smile" translatesAutoresizingMaskIntoConstraints="NO" id="k6K-mn-4Tx">
+                                        <rect key="frame" x="16" y="16" width="230.5" height="184.5"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9o-Hf-hT2">
+                                        <rect key="frame" x="87.5" y="216.5" width="87" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="S6S-nq-0UQ"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="Press Me!!!">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hwD-dd-Kyc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hPH-QQ-2IA" secondAttribute="height" multiplier="1:1" id="31T-0U-fKv"/>
+                                    <constraint firstItem="g9o-Hf-hT2" firstAttribute="centerX" secondItem="hPH-QQ-2IA" secondAttribute="centerX" id="7tr-1h-XnX"/>
+                                    <constraint firstAttribute="trailing" secondItem="k6K-mn-4Tx" secondAttribute="trailing" constant="16" id="CxB-Th-d8r"/>
+                                    <constraint firstAttribute="bottom" secondItem="g9o-Hf-hT2" secondAttribute="bottom" constant="16" id="GMF-BH-O1O"/>
+                                    <constraint firstItem="g9o-Hf-hT2" firstAttribute="top" secondItem="k6K-mn-4Tx" secondAttribute="bottom" constant="16" id="V6U-aB-QXf"/>
+                                    <constraint firstItem="k6K-mn-4Tx" firstAttribute="leading" secondItem="hPH-QQ-2IA" secondAttribute="leading" constant="16" id="dyp-mE-gdt"/>
+                                    <constraint firstItem="k6K-mn-4Tx" firstAttribute="top" secondItem="hPH-QQ-2IA" secondAttribute="top" constant="16" id="wPd-f5-Xu0"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="31T-0U-fKv"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="31T-0U-fKv"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hPH-QQ-2IA" firstAttribute="width" secondItem="KJ7-vh-9D6" secondAttribute="width" multiplier="0.7" id="3op-mi-hPz"/>
+                            <constraint firstItem="hPH-QQ-2IA" firstAttribute="width" secondItem="KJ7-vh-9D6" secondAttribute="width" multiplier="0.5" id="4cK-NQ-ys4"/>
+                            <constraint firstItem="KJ7-vh-9D6" firstAttribute="bottom" secondItem="hPH-QQ-2IA" secondAttribute="bottom" constant="32" id="9QT-oY-W0n"/>
+                            <constraint firstItem="hPH-QQ-2IA" firstAttribute="centerX" secondItem="KJ7-vh-9D6" secondAttribute="centerX" id="IKW-vn-w9P"/>
+                            <constraint firstItem="KJ7-vh-9D6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S5a-cN-H9J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KJ7-vh-9D6" secondAttribute="trailing" id="aec-GJ-i1K"/>
+                            <constraint firstItem="KJ7-vh-9D6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="da3-jU-Hba"/>
+                            <constraint firstItem="hPH-QQ-2IA" firstAttribute="top" secondItem="KJ7-vh-9D6" secondAttribute="top" constant="100" id="lyj-eE-bbJ">
+                                <variation key="heightClass=compact-widthClass=compact" constant="32"/>
+                            </constraint>
+                            <constraint firstItem="KJ7-vh-9D6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qDf-S7-mKn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9QT-oY-W0n"/>
+                                <exclude reference="3op-mi-hPz"/>
+                                <exclude reference="4cK-NQ-ys4"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="9QT-oY-W0n"/>
+                                <include reference="4cK-NQ-ys4"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="3op-mi-hPz"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="KJ7-vh-9D6" id="qc3-Kg-mS7"/>
+                        <outlet property="pressMeButton" destination="g9o-Hf-hT2" id="1gc-Sw-4O1"/>
+                        <outlet property="smileImageView" destination="k6K-mn-4Tx" id="n4o-nY-rSz"/>
+                        <outlet property="smileView" destination="hPH-QQ-2IA" id="ONd-lx-B66"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-343.19999999999999" y="-27.436281859070466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="smile" width="1280" height="800"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
